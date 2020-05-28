@@ -1,7 +1,12 @@
 **Props**
 | Name | Type | Default | Description |
 | -------- | ---------- | ------- | ----------- |
-| offset | number | | |
 | children | React\$Node | | |
+| type | Type | | |
+| dataTest | string | | |
 
 **enums**
+
+| **Type**         |
+| ---------------- |
+| "help" , "error" |

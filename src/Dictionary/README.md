@@ -1,7 +1,7 @@
 **Props**
 | Name | Type | Default | Description |
-| ---------- | ---------- | ------- | ----------- |
-| renderInto | string | | |
+| -------- | ------------ | ------- | ----------- |
+| values | Translations | | |
 | children | React\$Node | | |
 
 **enums**
