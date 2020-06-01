@@ -14,7 +14,7 @@ import getSpacingToken from "../common/getSpacingToken";
 import getFieldDataState from "../common/getFieldDataState";
 import randomID from "../utils/randomID";
 import formElementFocus from "./helpers/formElementFocus";
-import { StyledButtonPrimitive } from "../primitives/ButtonPrimitive";
+import { StyledButtonPrimitiveIconContainer } from "../primitives/ButtonPrimitive/components/ButtonPrimitiveIconContainer";
 
 import type { Props } from ".";
 
@@ -123,10 +123,6 @@ export const InputContainer = styled(({ children, className }) => (
         error ? theme.orbit.borderColorInputErrorHover : theme.orbit.borderColorInputHover
       }`};
   }
-
-  ${StyledButtonPrimitive}:active {
-    box-shadow: none;
-  }
 `;
 
 InputContainer.defaultProps = {
@@ -171,6 +167,10 @@ export const Prefix = styled(({ children, className }) => (
     height: ${getToken(TOKENS.iconSize)};
     color: ${({ theme }) => theme.orbit.colorIconInput};
   }
+
+  ${StyledButtonPrimitiveIconContainer} {
+    color: ${({ theme }) => theme.orbit.colorIconSecondary};
+  }
 `;
 
 Prefix.defaultProps = {
@@ -187,9 +187,10 @@ const Suffix = styled(({ children, className }) => <div className={className}>{c
   pointer-events: ${({ disabled }) => disabled && "none"};
   z-index: 3;
 
-  & svg {
+  ${StyledButtonPrimitiveIconContainer} {
     color: ${({ theme }) => theme.orbit.colorIconSecondary};
   }
+
   ${StyledServiceLogo} {
     height: 16px;
     padding: ${({ theme }) => rtlSpacing(`0 ${theme.orbit.spaceSmall} 0 0`)};
